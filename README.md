@@ -1,6 +1,6 @@
-# KSspaceTravel
+# ADspaceTravel
 
-**KSspaceTravel** is a React-based portfolio project that offers users an immersive space travel booking experience. Leveraging modern web technologies, it provides an interactive interface for exploring and reserving space missions.
+**ADspaceTravel** is a React-based portfolio project that offers users an immersive space travel booking experience. Leveraging modern web technologies, it provides an interactive interface for exploring and reserving space missions.
 
 ## 🚀 Features
 
@@ -34,7 +34,7 @@ KSspaceTravel/
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/KierstinS2024/KSspaceTravel.git
+   git clone  https://github.com/adangerfield1026/Space_Travel_Final.git
    cd KSspaceTravel
    ```
 
