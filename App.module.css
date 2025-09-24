@@ -1,0 +1,73 @@
+/* App.module.css */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(to right, #0b0c10, #1a1a1a);
+  color: #e0f7fa;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Header (e.g. page title or top banner if used) */
+.header {
+  background-color: #111820;
+  padding: 1.5rem 2rem;
+  color: #00bcd4;
+  font-size: 2rem;
+  font-weight: 600;
+  border-bottom: 2px solid #26c6da;
+  text-align: center;
+}
+
+/* Main content area */
+.main {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #111820;
+  color: #00bcd4;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.95rem;
+  border-top: 1px solid #26c6da;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .header {
+    font-size: 1.6rem;
+    padding: 1rem;
+  }
+
+  .main {
+    padding: 1.5rem;
+    gap: 1.2rem;
+  }
+
+  .footer {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    font-size: 1.3rem;
+    padding: 0.8rem;
+  }
+
+  .main {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .footer {
+    font-size: 0.75rem;
+  }
+}
