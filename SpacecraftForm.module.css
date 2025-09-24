@@ -1,0 +1,123 @@
+/* Container */
+.formContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px; /* Increased padding for better spacing */
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 100px; /* Added top margin to prevent overlap with navbar */
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Added gap between form groups for better spacing */
+}
+
+/* Input Styling */
+.input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background-color: #333;
+  color: #fff;
+  margin-top: 5px;
+  width: 100%; /* Ensure full width of input fields */
+}
+
+/* Form Group */
+.formGroup {
+  margin-bottom: 20px; /* Increased margin for better spacing */
+}
+
+/* Icon Selection Group */
+.iconSelectGroup {
+  display: flex;
+  justify-content: space-evenly; /* Space out the icons */
+  margin-top: 20px; /* Added margin for separation */
+  gap: 20px;
+}
+
+/* Icon Option Styling */
+.iconOption {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.iconOption img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.6);
+}
+
+/* Hover effect for icons */
+.iconOption:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.8);
+}
+
+/* Highlight selected icon */
+.selectedIcon {
+  border: 3px solid #00ffcc;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.8);
+}
+
+/* Submit Button */
+.submitButton {
+  background-color: #00ff99;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px; /* Added margin for spacing */
+  width: 100%; /* Full width for the submit button */
+}
+
+.submitButton:hover {
+  background-color: #00cc7a;
+}
+
+/* Error Message */
+.error {
+  color: #ff3366;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .formContainer {
+    padding: 20px; /* Reduced padding on smaller screens */
+  }
+
+  .spacecraftName {
+    font-size: 2.5rem;
+  }
+
+  .spacecraftDetails {
+    padding: 25px;
+  }
+
+  .spacecraftImage {
+    max-width: 80%;
+  }
+
+  .spacecraftDetails p {
+    font-size: 1rem;
+  }
+
+  .error {
+    font-size: 1.4rem;
+  }
+
+  .loading {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,116 @@
+/* Background gradient for a space-themed vibe */
+.container {
+  background: linear-gradient(to bottom, #101820, #4b5361);
+  color: #e0e1dd;
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+/* Hero section with a bold heading */
+.hero { 
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: #66fcf1;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 12px rgba(102, 252, 241, 0.6);
+  line-height: 1.2;
+}
+
+.subTitle {
+  font-size: 1.2rem;
+  color: #bbb;
+  margin-bottom: 2rem;
+}
+
+/* Intro text section */
+.intro {
+  margin-bottom: 2rem;
+}
+
+.paragraph {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #e0e1dd;
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Button Styling */
+.button {
+  background-color: #66fcf1;
+  color: #111;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 255, 255, 0.2);
+  outline: none;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #55bdb9;
+  color: white;
+  transform: scale(1.05);
+}
+
+.button:focus {
+  box-shadow: 0 0 4px 2px rgba(102, 252, 241, 0.8);
+}
+
+/* Details section with lighter text */
+.details {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.details .paragraph {
+  font-size: 1rem;
+  color: #ccc;
+  font-style: italic;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .subTitle {
+    font-size: 1rem;
+  }
+
+  .paragraph {
+    font-size: 1rem;
+  }
+
+  .button {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  /* Make the action buttons stack vertically on smaller screens */
+  .actionButtons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}

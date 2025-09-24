@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap');
+
+/* Global Body Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  color: #e0e1dd;
+}
+
+/* Main Container */
+.container {
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  animation: fadeIn 0.8s ease-in;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Title */
+h2 {
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.75rem;
+  color: #66fcf1;
+  margin-bottom: 3.5rem;
+  text-shadow: 0 0 12px rgba(102, 252, 241, 0.6);
+}
+
+/* Planet Section Styles */
+.planetSection {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(102, 252, 241, 0.1);
+  border-radius: 14px;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 0 14px rgba(102, 252, 241, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.planetSection:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 16px rgba(102, 252, 241, 0.15);
+}
+
+/* Planet Header */
+.planetHeader {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #66fcf1;
+  margin-bottom: 0.5rem;
+}
+
+.planetImage {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #66fcf1;
+  box-shadow: 0 0 10px rgba(102, 252, 241, 0.4);
+}
+
+/* Planet Population Text */
+.planetPopulation {
+  font-size: 1.1rem;
+  color: #b0b8c2;
+  margin-bottom: 1.5rem;
+}
+
+/* Error Message Styling */
+.dispatchError {
+  color: #ff6b6b;
+  font-weight: bold;
+  margin-top: 1rem;
+  padding: 10px;
+  background-color: rgba(255, 107, 107, 0.1);
+  border: 1px solid #ff6b6b;
+  border-radius: 8px;
+  text-align: center;
+}
+
+
+.dispatchError:hover {
+  background-color: rgba(255, 107, 107, 0.5); /* Darker red background on hover */
+}
+
+/* Spacecraft List Styles */
+.spacecraftList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Spacecraft Item Styling */
+.spacecraftItem {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 1.25rem;
+  border-radius: 12px;
+  margin-bottom: 1.2rem;
+  transition: background-color 0.2s ease;
+}
+
+.spacecraftItem:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.spacecraftImage {
+  width: 50px; /* Set the width to a fixed value */
+  height: 50px; /* Set the height to match the width */
+  object-fit: cover; /* Ensure the image maintains its aspect ratio */
+  border-radius: 8px;
+  border: 1px solid #66fcf1;
+  box-shadow: 0 0 6px rgba(102, 252, 241, 0.25);
+}
+
+
+/* Spacecraft Details Styling */
+.spacecraftDetails {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.spacecraftName {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.spacecraftCapacity {
+  font-size: 1rem;
+  color: #66fcf1;
+  font-weight: 500;
+}
+
+/* Select Container Styling */
+.selectContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.selectContainer select {
+  background-color: #0b0c10;
+  border: 1px solid #45a29e;
+  color: #c5c6c7;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: box-shadow 0.2s ease;
+}
+
+.selectContainer select:focus {
+  outline: none;
+  border-color: #66fcf1;
+  box-shadow: 0 0 6px rgba(102, 252, 241, 0.35);
+}
+
+/* Dispatch Button Styling */
+.dispatchButton {
+  padding: 0.6rem 1.2rem;
+  background-color: #1f2833;
+  color: #66fcf1;
+  border: 1px solid #45a29e;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dispatchButton:hover {
+  background-color: #0b0c10;
+  box-shadow: 0 0 12px rgba(102, 252, 241, 0.35);
+}
+
+.dispatchButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Spinner Animation */
+.spinner {
+  display: inline-block;
+  margin-left: 0.5rem;
+  width: 1em;
+  height: 1em;
+  border: 2px solid #66fcf1;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* Empty State Text */
+.empty {
+  text-align: center;
+  color: #aaaaaa;
+  font-style: italic;
+  margin-top: 1.2rem;
+}
+
+/* Animations */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .planetHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .spacecraftItem {
+    padding: 1rem;
+  }
+
+  .selectContainer {
+    width: 100%;
+  }
+
+  .selectContainer select,
+  .dispatchButton {
+    width: 100%;
+  }
+
+  .planetImage {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Ensure your dispatchError styles are already there as previously outlined */
+
+.dispatchError {
+  background-color: rgba(255, 107, 107, 0.3); /* Light red background */
+  color: #ff6b6b; /* Red text color */
+  font-weight: bold;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 1rem; /* Adjust margin */
+  box-shadow: 0 0 8px rgba(255, 107, 107, 0.4); /* Shadow effect */
+  width: 100%;
+  max-width: 400px; /* Limit width */
+  margin-left: auto;
+  margin-right: auto;
+  transition: background-color 0.3s ease;
+}
+
+.dispatchError:hover {
+  background-color: rgba(255, 107, 107, 0.5); /* Darker red background on hover */
+}
+
+
+/* Spacecraft Button and Error Positioning */
+.dispatchButton {
+  padding: 0.6rem 1.2rem;
+  background-color: #1f2833;
+  color: #66fcf1;
+  border: 1px solid #45a29e;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  width: 100%; /* Make button full-width for smaller screens */
+}
+
+.dispatchButton:hover {
+  background-color: #0b0c10;
+  box-shadow: 0 0 12px rgba(102, 252, 241, 0.35);
+}
+
+.dispatchButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Adjust select container and button to align vertically on mobile */
+.selectContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  width: 100%; /* Ensure full-width layout */
+}
+
+/* Responsive Layout Adjustments */
+@media (max-width: 640px) {
+  .dispatchButton {
+    width: 100%; /* Button fills the width */
+  }
+
+  /* Position the error message above or below the dispatch button */
+  .dispatchError {
+    width: 100%; /* Ensure it stretches fully */
+    margin-top: 1rem;
+  }
+}
