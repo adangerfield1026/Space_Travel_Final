@@ -1,0 +1,118 @@
+/* Navbar container */
+.navbar {
+  background-color: #101820; /* Dark background for contrast */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 2rem; /* Reduced padding to shrink the navbar */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 60px; /* Set height to keep it compact */
+  box-shadow: 0 2px 5px rgba(0, 255, 255, 0.2);
+}
+
+/* Logo section */
+.logo a {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  color: #66fcf1;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+/* Navbar links container */
+.navList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar item styling */
+.navItem {
+  margin-left: 1.5rem;
+}
+
+/* Navbar links */
+.navLink {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  color: #e0e1dd;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.navLink:hover {
+  color: #66d9fc;
+  transform: scale(1.05);
+}
+
+.navItem:first-child {
+  margin-left: 0;
+}
+
+/* Active link styling */
+.active {
+  color: #66fcf1; /* Highlight active link */
+  font-weight: bold;
+  font-family: 'spaceneon', sans-serif; /* Different font for active link */
+  text-shadow: 0 0 5px rgba(102, 252, 241, 0.8); /* Glow effect */
+}
+
+/* Hamburger menu for mobile */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+}
+
+.hamburger div {
+  height: 4px;
+  width: 100%;
+  background-color: #66fcf1;
+  border-radius: 5px;
+}
+
+/* Mobile menu styling */
+.navList.open {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 1.5rem; /* Less padding for smaller screens */
+    height: 55px; /* Smaller navbar height on mobile */
+  }
+
+  .navList {
+    display: none; /* Hide links on mobile */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #101820;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .navList.open {
+    display: flex; /* Show the nav links when menu is open */
+  }
+
+  .navItem {
+    margin: 0.5rem 0;
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger menu on mobile */
+  }
+}

@@ -1,0 +1,61 @@
+/* SpacecraftCard.module.css */
+.card {
+  cursor: pointer; /* Make the card clickable */
+  border: 1px solid #444;
+  border-radius: 8px;
+  background-color: #1b2a33;
+  padding: 1rem;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.icon {
+  width: 100px; /* Adjust icon size */
+  height: 100px;
+  margin: 0 auto;
+  display: block;
+}
+
+.header {
+  text-align: center;
+}
+
+.name {
+  font-size: 1.5rem;
+  color: #66fcf1;
+  margin: 0.5rem 0;
+}
+
+.capacity {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #e0e1dd;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.button {
+  background-color: #66fcf1;
+  color: #111;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.deleteButton {
+  background-color: red;
+  color: white;
+}

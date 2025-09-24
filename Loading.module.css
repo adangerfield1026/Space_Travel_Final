@@ -1,0 +1,47 @@
+/* src/components/Loading.module.css */
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  color: #a3e0ff;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+}
+
+.loader {
+  width: 64px;
+  height: 64px;
+  border: 6px solid rgba(0, 229, 255, 0.2);
+  border-top: 6px solid #00e5ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 0 8px rgba(0, 229, 255, 0.3);
+}
+
+.loadingText {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  color: #a3e0ff;
+  animation: glow 1.6s ease-in-out infinite alternate;
+}
+
+/* Spinner animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Glowing text effect */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 4px #00e5ff, 0 0 8px #00e5ff;
+  }
+  to {
+    text-shadow: 0 0 8px #00e5ff, 0 0 16px #00e5ff;
+  }
+}
