@@ -35,7 +35,7 @@ KSspaceTravel/
 
    ```bash
    git clone  https://github.com/adangerfield1026/Space_Travel_Final.git
-   cd KSspaceTravel
+   cd Space_travel_Final
    ```
 
 2. **Install dependencies**:
